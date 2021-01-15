@@ -15,7 +15,7 @@ public class LocationController {
 		Location location1 = new Location("l1","Lagos");
 		Location location2 = new Location("l2", "Asaba");
 		Location location3 = new Location("l3", "Budapest");
-		return Arrays.asList(null);
+		return Arrays.asList(location1,location2,location3);
 		
 	}
 
