@@ -1,8 +1,8 @@
-package post;
+package com.example.demo.user;
 
 import org.springframework.stereotype.Service;
 
 @Service
-public class PostService {
+public class UserService {
 
 }

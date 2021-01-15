@@ -1,5 +1,5 @@
-package user;
-import location.Location;
+package com.example.demo.user;
+import com.example.demo.location.Location;
 
 public class User {
 	private String id;
@@ -9,6 +9,14 @@ public class User {
     private String email;
     
     
+	public User(String id, String firstname, String lastname, Location location, String email) {
+		super();
+		this.id = id;
+		this.firstname = firstname;
+		this.lastname = lastname;
+		this.location = location;
+		this.email = email;
+	}
 	public String getId() {
 		return id;
 	}
