@@ -1,5 +1,6 @@
 package com.example.demo.post;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -36,7 +37,8 @@ public class PostService {
 			user2,
 			"We all need someone");		
 	
-	private List<Post> posts = Arrays.asList(post1,post2);
+	//private List<Post> posts = Arrays.asList(post1,post2);
+		List<Post> posts = new ArrayList<>(Arrays.asList(post1, post2));
 	
 	public List<Post> getAllPosts(){
 		return posts;
@@ -48,6 +50,11 @@ public class PostService {
 				.findFirst()
 				.orElse(null);
 		return post;
+		
+	}
+
+	public void addPost(Post post) {
+		posts.add(post);
 		
 	}
 

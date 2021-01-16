@@ -39,4 +39,9 @@ public class UserService {
 		return user;
 	}
 
+	public void addUser(User user) {
+		users.add(user);
+		
+	}
+
 }
