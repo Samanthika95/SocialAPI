@@ -17,6 +17,8 @@ public class UserController {
 	private UserService userService;
 	
 	@RequestMapping(value="/users")
+	
+	
 	   public List<User> getAllUsers() {
 		
 		return userService.getAllUsers();
@@ -31,6 +33,11 @@ public class UserController {
 	    @RequestMapping(value = "/users" ,method = RequestMethod.POST)
 	    public void addUser(@RequestBody User user) {
 	    	userService.addUser(user);
+	    }
+	    
+	    @RequestMapping(value = "/users/{id}", method = RequestMethod.PUT)
+	    public void updateLocation(@RequestBody User user, @PathVariable String id) {
+	    	userService.updateLocation(user,id);
 	    }
 
 }
