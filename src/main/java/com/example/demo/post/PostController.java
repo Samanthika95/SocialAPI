@@ -33,5 +33,10 @@ public class PostController {
 	public void updatePost(@RequestBody Post post, @PathVariable String id) {
 		postservice.updatePost(post,id);
 	}
+	
+	@RequestMapping(value = "/posts/{id}", method = RequestMethod.DELETE)
+	public void deletePost(@PathVariable String id) {
+		postservice.deletePost(id);
+	}
 
 }
