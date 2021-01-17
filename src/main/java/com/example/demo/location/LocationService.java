@@ -34,4 +34,14 @@ public class LocationService {
 		
 	}
 
+	public void updateLocation(Location location, String id) {
+		for (int i=0; i<locations.size();i++) {
+			Location l = locations.get(i);
+			if(l.getId().equals(id)) {
+				locations.set(i, location);
+			}
+		}
+		
+	}
+
 }
