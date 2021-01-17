@@ -39,5 +39,10 @@ public class UserController {
 	    public void updateLocation(@RequestBody User user, @PathVariable String id) {
 	    	userService.updateLocation(user,id);
 	    }
+	    
+	    @RequestMapping(value = "/users/{id}", method = RequestMethod.DELETE)
+	    public void deleteUser(@PathVariable String id) {
+	    	userService.deleteUser(id);
+	    }
 
 }
