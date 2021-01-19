@@ -1,7 +1,12 @@
 package com.example.demo.user;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
 import com.example.demo.location.Location;
 
+@Entity
 public class User {
+	@Id
 	private String id;
     private String firstname;
     private String lastname;
@@ -17,6 +22,11 @@ public class User {
 		this.location = location;
 		this.email = email;
 	}
+	
+	public User() {
+		
+	}
+	
 	public String getId() {
 		return id;
 	}
