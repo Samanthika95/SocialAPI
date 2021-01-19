@@ -17,6 +17,10 @@ public class Student {
 		this.department = department;
 	}
 	
+	public Student() {
+		
+	}
+	
 	public String getId() {
 		return id;
 	}
