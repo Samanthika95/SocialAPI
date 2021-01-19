@@ -15,6 +15,23 @@ public class LocationController {
 	@Autowired
 	private LocationService locationservice;
 	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	/*
 	@RequestMapping(value = "/locations")
 	public List<Location> getAllLocations(){
 		return locationservice.getAllLocations(); 
@@ -41,5 +58,6 @@ public class LocationController {
 	public void deleteLocaion(String id) {
 		locationservice.deleteLocation(id);
 	}
+	*/
 
 }

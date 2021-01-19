@@ -16,6 +16,23 @@ public class UserController {
 	@Autowired
 	private UserService userService;
 	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	/*
 	@RequestMapping(value="/users")
 	
 	
@@ -44,5 +61,6 @@ public class UserController {
 	    public void deleteUser(@PathVariable String id) {
 	    	userService.deleteUser(id);
 	    }
+	    */
 
 }

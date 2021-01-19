@@ -11,6 +11,33 @@ import com.example.demo.user.User;
 
 @Service
 public class PostService {
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	/*
 	User user1 = new User(
 			"u1", 
 			"Jany", 
@@ -73,5 +100,5 @@ public class PostService {
 		posts.removeIf(t -> t.getId().equals(id));
 		
 	}
-
+*/
 }
