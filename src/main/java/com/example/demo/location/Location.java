@@ -1,6 +1,11 @@
 package com.example.demo.location;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
 public class Location {
+	@Id
 	private String id;
 	private String name;
 	
@@ -10,6 +15,11 @@ public class Location {
 		this.id = id;
 		this.name = name;
 	}
+	
+	public Location() {
+		
+	}
+	
 	public String getId() {
 		return id;
 	}
