@@ -1,14 +1,71 @@
 package com.example.demo.user;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Optional;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.example.demo.location.Location;
 
 @Service
 public class UserService {
+	
+	@Autowired
+	public UserRepository userRepository; 
+	
+	public List<User> getAllUsers(){
+		
+		List <User> users = new ArrayList<>();
+		userRepository.findAll()
+		.forEach(users::add);
+		
+		return users;
+		
+	}
+	
+	public void addUser(User user) {
+		userRepository.save(user);
+	}
+	
+	public Optional<User> getUser(String id){
+		return userRepository.findById(id);
+	}
+	
+	public void deleteUser(String id) {
+		userRepository.deleteById(id);
+	}
+	
+	public void updateUser(String id, User user) {
+		userRepository.save(user);
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	/*
 	User user1 = new User(
 			"u1", 
 			"Jany", 
@@ -60,5 +117,6 @@ public class UserService {
 		users.removeIf(t -> t.getId().equals(id));
 		
 	}
+	*/
 
 }

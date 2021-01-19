@@ -3,6 +3,7 @@ package com.example.demo.post;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.stereotype.Service;
 
@@ -12,13 +13,34 @@ import com.example.demo.user.User;
 @Service
 public class PostService {
 	
+	public PostRepository postRepository;
+	
+	public List<Post> getAllPosts(){
+		List <Post> posts = new ArrayList<>();
+		
+		postRepository.findAll()
+		.forEach(posts::add);
+		
+		return posts;
+		
+	}
 	
 	
+	public void addPost(Post post) {
+		postRepository.save(post);
+	}
 	
+	public Optional<Post> getPost(String id){
+		return postRepository.findById(id);
+	}
 	
+	public void deleteUser(String id) {
+		postRepository.deleteById(id);
+	}
 	
-	
-	
+	public void updateUser(String id, Post post) {
+		postRepository.save(post);
+	}
 	
 	
 	
