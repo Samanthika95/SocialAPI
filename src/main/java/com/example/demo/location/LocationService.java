@@ -11,7 +11,7 @@ import org.springframework.stereotype.Service;
 public class LocationService {
 	
 	@Autowired
-	public LocationRepository locationRepository;
+	private LocationRepository locationRepository;
 	
 	public List <Location> getAllLocations(){
 		 List<Location> locations = new ArrayList<>();

@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class PostService {
 	
-	public PostRepository postRepository;
+	private PostRepository postRepository;
 	
 	public List<Post> getAllPosts(){
 		List <Post> posts = new ArrayList<>();
