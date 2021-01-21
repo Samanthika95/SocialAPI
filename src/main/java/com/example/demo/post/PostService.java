@@ -34,11 +34,12 @@ public class PostService {
 		return postRepository.findById(id);
 	}
 	
-	public void deleteUser(String id) {
+	public void deletePost(String id) {
 		postRepository.deleteById(id);
 	}
 	
-	public void updateUser(String id, Post post) {
+
+	public void updatePost(String id, Post post) {
 		postRepository.save(post);
 	}
 	
